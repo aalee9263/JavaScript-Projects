@@ -42,7 +42,22 @@ main {
     background-color: #636e72;
     color: white;
     padding: 10px;
+    margin: 10px 0 20px 0;
     border-radius: 2px;
     font-weight: 700;
-
+    text-align: justify;
+    padding-right: 26px;
+    user-select: none;
 }
+
+#to-do-box li i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.done{
+    text-decoration: line-through;
+    color: black;
+    background-color: #dfe6e9 !important ;
+}
+
