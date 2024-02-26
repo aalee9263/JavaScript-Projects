@@ -1,20 +1,21 @@
 const item = document.querySelector("#item")
 const toDoBox = document.querySelector("#to-do-box")
+
 const saveItems = () => {
-    const notes = document.querySelectorAll("item");
+    const notes = document.querySelectorAll("to-do-box");
     console.log(notes)
-    const data = [];
-    notes.forEach(
-        (note) => {
-            data.push(note.value)
-        }
-    )
-    // console.log(data)
-if (data.length === 0) {
-    localStorage.removeItem("notes")
-}   else {
-    localStorage.setItem("notes", JSON.stringify(data))
-}
+//     const data = [];
+//     notes.forEach(
+//         (note) => {
+//             data.push(note.value)
+//         }
+//     )
+//     // console.log(data)
+// if (data.length === 0) {
+//     localStorage.removeItem("notes")
+// }   else {
+//     localStorage.setItem("notes", JSON.stringify(data))
+// }
 
     
 }
