@@ -25,10 +25,10 @@ const questions = [
     },
 ]
 
-let index = 1;
+let index = 0;
 let total =questions.length;
 let right = 0;
-let wrong = 0;
+    wrong = 0;
 const queBox = document.getElementById("queBox")
 const optionInputs = document.querySelectorAll(".options")
 const loadQuestion =() => {
@@ -42,11 +42,12 @@ const loadQuestion =() => {
 
 const submitQuiz = () => {
     const ans = getAnswer()
-    if (ans === data.correct) {
-        right++;
-    } else {
-        wrong++;
-    }
+    // if (ans === data.correct) {
+    //     // right++;
+    //     console.log("yes")
+    // } else {
+    //     // wrong++;
+    // }
     index++;
     loadQuestion();
     return;
@@ -57,10 +58,11 @@ const getAnswer = () => {
         (input) => {
             if (input.checked) {
                 return input.value;
-            }
+            } 
         }
     )
 }
+
 
 //initial call
 loadQuestion()
