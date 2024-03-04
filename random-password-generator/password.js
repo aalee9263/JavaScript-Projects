@@ -32,8 +32,10 @@ const generatePassword = (password = "") => {
     if (password.length < totalChar.value) {
         return generatePassword(password)
     }
-    console.log(password)
+    // console.log(truncateString(password, totalChar.value))
+    passBox.innerText = truncateString(password, totalChar.value);
 }
+generatePassword();
 
 document.getElementById("btn").addEventListener(
     "click",
@@ -42,7 +44,7 @@ document.getElementById("btn").addEventListener(
     }
 )
 
-function turncateString(str, num) {
+function truncateString(str, num) {
     if (str.length > num) {
         let subStr = str.substring(0, num);
         return subStr;
@@ -51,4 +53,3 @@ function turncateString(str, num) {
     }
 }
 
-generatePassword();
